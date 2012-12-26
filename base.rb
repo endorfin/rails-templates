@@ -10,10 +10,6 @@ run "echo '--format documentation' >> .rspec"
 # add database example
 run "cp config/database.yml config/example_database.yml"
 
-# set up the databases
-rake "db:create", :env => 'development'
-rake "db:create", :env => 'test'
-
 # application settings
 application "config.generators.stylesheets = false"
 application "config.generators.javascripts = false"
