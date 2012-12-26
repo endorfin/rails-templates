@@ -1,8 +1,11 @@
 # RSpec for testing
 gem_group :development, :test do
   gem "rspec-rails"
+  gem "capybara"
 end
-generate :rspec
+generate "rspec:install"
+run "mkdir spec/support spec/models spec/routing"
+run "echo '--format documentation' >> .rspec"
 
 # add database example
 run "cp config/database.yml config/example_database.yml"
