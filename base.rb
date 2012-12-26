@@ -1,6 +1,7 @@
 # RSpec for testing
 gem_group :development, :test do
   gem "rspec-rails"
+  gem "factory_girl"
   gem "capybara"
 end
 generate "rspec:install"
